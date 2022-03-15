@@ -3,7 +3,13 @@
 }
 
 :root {
-    
+  --light-green-color: rgb(104,210, 137);
+  --dark-green-color: rgb(92, 190, 124);
+  --light-gray-color: rgb(243, 243, 243);
+  --black-color: rgb(47, 46, 54);
+  --white-color: rgb(255, 255, 255);
+  --yellow-color: rgb(238, 215, 85);
+  --bg-color: rgb(25, 95, 96);
 }
 
 body {
@@ -11,6 +17,8 @@ body {
   display: grid;
   height: 100vh;
   font-family: Helvetica;
+  background-color: var(--bg-color);
+  font-size: 14px;
 }
 
 .card {
@@ -18,12 +26,15 @@ body {
   width: 25vw;
   max-width: 275px;
   min-width: 250px;
+  max-height: 450px;
+  min-height: 400px;
   margin: 20vh auto;
-  background-color: #a2cbb6;
+  background-color: var(--white-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  filter: drop-shadow(5px 5px 10px var(--black-color));
 }
 
 .person,
@@ -33,6 +44,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .person,
@@ -42,15 +54,99 @@ body {
   flex-direction: column;
 }
 
+.contact {
+  display: flex;
+  flex-direction: row;
+}
+
 .person {
   flex-grow: 2.5;
 }
 
+.status {
+  display: flex;
+  width: 100%;
+  flex-basis: 10%;
+  justify-content: right;
+  padding: 5px;
+  color: #c0c0c0;
+}
+
+.photo {
+  display: flex;
+  flex-basis: 60%;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  display: flex;
+  flex-basis: 30%;
+  justify-content: center;
+  align-items: center;
+}
+
 .rating,
 .contact {
-  flex-grow: 1;
+  flex-grow: 1.5;
+}
+
+.rating {
+  background-color: var(--light-gray-color);
 }
 
 .offer {
-  flex-grow: 1.5;
+  flex-grow: 2;
 }
+
+.photo > img {
+  border: 3px solid var(--light-green-color);
+  border-radius: 50%;
+  width: 40%;
+  background-size: cover;
+}
+
+.intro, .name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.phone {
+  display: flex;
+  height: 100%;
+  flex-basis: 50%;
+  background-color: var(--light-green-color);
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: var(--white-color)
+}
+
+.whatsapp {
+  display: flex;
+  height: 100%;
+  flex-basis: 50%;
+  background-color: var(--dark-green-color);
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: var(--white-color)
+}
+
+.yellow-star {
+  color: var(--yellow-color);
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.gray-star {
+  color: rgb(205, 205, 205);
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+}
+
