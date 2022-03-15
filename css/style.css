@@ -1,0 +1,45 @@
+* {
+    /* height & width now includes border & padding */
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    display: grid;
+    height: 100vh;
+    font-family: Helvetica;
+  }
+
+  .card {
+      height: 60vh;
+      width: 25vw;
+      max-width: 275px;
+      min-width: 250px;
+      background-color: #a2cbb6;
+      display: flex;
+      margin: 20vh auto;
+      flex-direction: row;
+      justify-content: flex-start;
+  }
+
+  nav > div {
+      font-size: 20px;
+      margin: 10px;
+      color: #f3dba8;
+  }
+
+  nav > div:last-child {
+      margin-left: auto;
+  }
+
+  aside {
+    background-color: #a2b4da;
+  }
+  
+  main {
+    background-color: #f3dba8;
+  }
+  
+  footer {
+    background-color: #a2cbb6;
+  }
